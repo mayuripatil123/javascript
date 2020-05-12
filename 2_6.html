@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<body>
+<script>
+    function cpy()
+    {
+        var txtB1=document.getElementById("demo");
+        var txtB2=document.getElementById("demo2");
+        txtB2.value=txtB1.value;
+    }
+    </script>
+
+    <input type ="text" name=txtB1  id="demo" ><br><br><br>
+    <input type= "text" name=txtB2 id="demo2"><br><br>
+<input type="button" value="cpy" onclick="cpy();"/>
+</body>
+</html>

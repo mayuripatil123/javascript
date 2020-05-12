@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<body>
+<button onclick="myfunction()">ascending</button>
+<p id="demo"></p>
+<script>
+ var num = [40,100,20,11,12,15,1,2,3,6];
+ document.getElementById("demo").innerHTML=num;
+ function myfunction()
+ {
+     num.sort(function(a,b){return a-b});
+     document.getElementById("demo").innerHTML=num;
+ }
+
+    </script>
+    </body>
+    </html>
