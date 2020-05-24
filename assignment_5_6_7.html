@@ -1,0 +1,82 @@
+
+<!doctype html>
+<html>
+<body>
+<form method="get" action="welcome.html">
+userName:<input type="text" id="fname" name="fname" onchange="mayuri(this,'user id must be min 3 and max15 char')" required/><br><br><br>
+
+password:<input type="text"  id="pname" name="pname" onchange="mayuri(this,'pw must be min 8 char')" required/><br><br><br>
+
+mobile:<input type="tel"  id="mname" name="mname"  onchange="mayuri(this,'mob no must me 10 dig')" required/><br><br><br>
+
+address:<input type="text"  id="aname" name="aname" onchange="mayuri(this,)" required/><br><br><br>
+
+
+age:<input type="text"  id="agname" name="agname" onchange="mayuri(this,'age must be between 18-100')" required/><br><br><br>  
+
+<input type="submit" value="submit">
+</form>
+
+<p id="error"></p>
+
+<script>
+
+  function mayuri(ref,error)
+  {
+    var inp = {};
+    inp.value=ref.value;
+    inp.id=ref.id;
+
+
+    switch(inp.id)
+    {
+      case "fname":
+      switch (inp.id) {
+          case "fname":
+            var len = inp.value.length;
+            if (document.getElementById("fname").validity.valueMissing) {
+              document.getElementById("error").innerHTML =
+                "User ID is mandatory";
+            } else if (len < 3 || len > 15) {
+              document.getElementById("error").innerHTML = error;
+            } else {
+              document.getElementById("error").innerHTML = "";
+            }
+            break;
+          case "pname":
+            var len = inp.value.length;
+            if (document.getElementById("pname").validity.valueMissing) {
+              document.getElementById("error").innerHTML =
+                "Password is mandatory";
+            } else if (len < 8) {
+              document.getElementById("error").innerHTML = error;
+            } else {
+              document.getElementById("error").innerHTML = "";
+            }
+            break;
+          case "mname":
+            var len = inp.value.length;
+            if (document.getElementById("mname").validity.valueMissing) {
+              document.getElementById("error").innerHTML =
+                "Mobile is mandatory";
+            } else if (len != 10) {
+              document.getElementById("error").innerHTML = error;
+            } else {
+              document.getElementById("error").innerHTML = "";
+            }
+            break;
+        
+          case "agname":
+            if (document.getElementById("agname").validity.valueMissing) {
+              document.getElementById("error").innerHTML = "Age is mandatory";
+            } else if (inp.value < 18 || inp.value > 100) {
+              document.getElementById("error").innerHTML = error;
+            } else {
+              document.getElementById("error").innerHTML = "";
+            }
+            break;
+        }
+      }
+</script>
+</body>
+</html>
