@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <body>
+
+        <p id="demo"></p>
+   <script>
+
+       
+function myfunction()
+       {
+           let sum=0;
+           let x= arguments.length;
+           for(i=0;i<x;i++){
+           sum += arguments[i];
+           }
+           return sum;
+       }
+       var x= myfunction(2,4);
+     document.getElementById("demo").innerHTML=x;
+
+       </script>
+       </body>
+    </html>
