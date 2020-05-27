@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <body>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <script>
+        class math{
+            constructor(no)
+            {
+                this.cno=no;
+            }
+
+            static square(x)
+            {
+             return x.cno*x.cno;
+            }
+            static cube(x)
+            {
+             return x.cno*x.cno*x.cno;
+            }
+            
+            }
+            p=new math("2");
+            document.getElementById("demo").innerHTML=math.square(p);
+
+            document.getElementById("demo1").innerHTML=math.cube(p);
+
+
+
+            </script>
+        </body>
+    </html>
