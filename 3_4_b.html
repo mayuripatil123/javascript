@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <body>
+
+        <p id="demo"></p>
+        <script>
+            class account{
+                constructor(name,balance){
+                    this.cname=name;
+                    this.cbalance=balance;
+                }
+        
+            deposit(amount)
+            {
+              this.cbalance+=amount;
+            }
+            display()
+            {
+                var p="name:"+this.cname+"<br/>balance:"+this.cbalance;
+                document.getElementById("demo").innerHTML=(p);
+
+            }
+            }
+
+
+            var m= new account("mayuri",10000);
+            var n= new account("sunil",14000);
+            m.deposit(10000);
+            n.deposit(14000);
+            m.display();
+            n.display();
+
+            
+            </script>
+        </body>
+    </html>
