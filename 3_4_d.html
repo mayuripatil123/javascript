@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <body>
+        
+        <script>
+          class account{
+              constructor(name,balance)
+              {
+                  this.cname=name;
+                  this.cbalance=balance;
+
+              }
+              deposit(amt)
+              {
+              this.cbalance+=amt;
+              }
+            }
+            class current_account extends account{
+                constructor(name1,bal1)
+                {
+                   super(name1,bal1);
+                }
+                withdraw(amt1)
+                {
+                    this.cbalance-=amt1;
+                }
+
+                show()
+                {
+                    var p="name:"+this.cname+"<br/>balance:"+this.cbalance;
+                document.write(p);
+                }
+
+            }
+
+
+            var x=new current_account("mayuri",6000);
+            var y=new current_account("sunil",5000);
+            x.deposit(6000);
+           
+            y.deposit(5000);
+             
+             x.withdraw(500);
+            
+            y.withdraw(1000);
+            x.show();
+            y.show();
+
+            </script>
+        </body>
+    </html>
